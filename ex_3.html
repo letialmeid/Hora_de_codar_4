@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<script>
+
+    var lista_compras = ["banana", "maça", "uva", "melancia", "mexirica"];
+    var fruta;
+
+    while(true){
+        alert("Sua lista de compras contém: " + lista_compras.join(", "));
+        fruta = prompt("Digite o nome da fruta que ja está no carrinho:");
+
+        if(lista_compras.includes(fruta))
+        {
+            var index = lista_compras.indexOf(fruta);
+            lista_compras.splice(index, 1);
+            alert(fruta + " foi removida da lista de compras");
+        }
+        else
+        {
+            alert("Esta fruta não está mais na sua lista de compras");
+        }
+
+        if(lista_compras.length == 0)
+        {
+            alert("Lista de compras finalizada");
+            break;
+        }
+    }
+
+
+</script>
+<body>
+    
+</body>
+</html>
